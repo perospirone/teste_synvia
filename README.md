@@ -5,6 +5,7 @@
 $ git clone https://github.com/danitw/teste_synvia.git
 $ cd teste_synvia
 $ yarn
+$ yarn start
 ```
 
 
