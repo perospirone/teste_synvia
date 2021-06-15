@@ -1,12 +1,9 @@
-import { PrismaClient } from '@prisma/client'
+import knex from "../database/index.js";
 
-const prisma = new PrismaClient()
+export async function createUser(user) {
+  return await knex("users").insert(user);
+}
 
-export async function RegisterUser(user) {
-  return await prisma.user.create({
-    data: {
-      email: "elsa@prisma.io",
-      name: "dd",
-    },
-  });
+export async function readUser(email) {
+  return await knex.from("users").select().where("email", email);
 }
