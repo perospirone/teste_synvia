@@ -4,7 +4,6 @@ export const up = function (knex) {
     table.string("name");
     table.string("email").unique();
     table.string("password");
-    table.timestamps();
   });
 };
 
