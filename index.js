@@ -1,7 +1,7 @@
 import express from "express";
 import routes from "./src/routes.js";
 
-var port = 8080;
+var port = process.env.PORT || 8080;
 
 const app = express();
 
